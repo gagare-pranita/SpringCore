@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean class="com.jspiders.springcore.bean.CustomerBean" name="customer1">
+       <property name="id" value="1"/>
+       <property name="name" value="Pranita"/>
+       <property name="add" value="pune"/>
+       <property name="product" >
+       <list>
+       <ref bean="product1"/>
+       <ref bean ="product2"/>
+       </list>
+       </property>
+       </bean>
+       
+        <bean class="com.jspiders.springcore.bean.CustomerBean" name="customer2">
+       <property name="id" value="2"/>
+       <property name="name" value="swati"/>
+       <property name="add" value="pune"/>
+       <property name="product" >
+       <list>
+       <ref bean ="product1"/>
+       <ref bean="product2"/>
+       </list>
+       </property>
+         </bean>
+         
+         <bean class="com.jspiders.springcore.bean.ProductBean" name="product1">
+         <property name="id" value="1"/>
+         <property name="pName" value="ponds"/>
+         <property name="price" value="12"/>
+         <property name="customer">
+         <list>
+         <ref bean="customer1"/>
+         <ref bean ="customer2"/>
+         </list>
+         </property>
+      
+         </bean>
+       
+        <bean class="com.jspiders.springcore.bean.ProductBean" name="product2">
+         <property name="id" value="2"/>
+         <property name="pName" value="sanottor"/>
+         <property name="price" value="12"/>
+         <property name="customer">
+         <list>
+         <ref bean ="customer2"/>
+         <ref bean ="customer1"/>
+         </list>
+         </property>
+      
+         </bean>
+        </beans>

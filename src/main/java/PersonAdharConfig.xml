@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.jspiders.springcore.bean.PersonBean" name="person1">
+<property name="id" value="1"/>
+<property name="name" value="pranita"/>
+<property name="adhar" ref="adhar1"/>
+</bean>
+
+<bean class="com.jspiders.springcore.bean.AdharBean"  name="adhar1">
+<property name="id" value="1"/>
+<property name="adharNo" value="882388577914"/>
+</bean>
+ 
+
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean class="com.jspiders.springcore.bean.StudentsBean" name="student1">
+       <property name="id" value="1"/>
+       <property name="name" value="pranita"/>
+       <property name="age" value="23"/>
+       <property name="courses">
+       <list>
+       <ref bean="course1"/>
+       <ref bean ="course2"/>
+       </list>
+       </property>
+       </bean>
+        <bean class="com.jspiders.springcore.bean.StudentsBean" name="student2">
+       <property name="id" value="2"/>
+       <property name="name" value="swati"/>
+       <property name="age" value="23"/>
+       <property name="courses">
+       <list>
+       <ref bean="course2"/>
+       <ref bean ="course3"/>
+       </list>
+       </property>
+       </bean>
+       <bean class="com.jspiders.springcore.bean.CourseBean" name="course1">
+       <property name="id" value="1"/>
+       <property name="cName" value="java"/>
+       <property name="fee" value="20000"/>
+       </bean>
+        <bean class="com.jspiders.springcore.bean.CourseBean" name="course2">
+       <property name="id" value="3"/>
+       <property name="cName" value="j2ee"/>
+       <property name="fee" value="20000"/>
+       </bean>
+        <bean class="com.jspiders.springcore.bean.CourseBean" name="course3">
+       <property name="id" value="3"/>
+       <property name="cName" value="sql"/>
+       <property name="fee" value="20000"/>
+       </bean>
+        
+        
+        
+        
+        </beans>
